@@ -21,7 +21,13 @@ import { svgoPluginSettings, SKETCH_APP_ROOT } from "./config";
 
 const sendToRenderer = (err, id, _path) => {
   if (!err) {
+    console.log(_path);
+    _path = "electron/scripts/TESTINGSS.png";
+    const objPath = path.parse(_path);
+    _path = path.format(objPath);
     win.webContents.send(id, _path);
+    console.log(id);
+    console.log(_path);
   } else {
     log.error(err);
     win.webContents.send(id, "error");
