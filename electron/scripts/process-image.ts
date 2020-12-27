@@ -19,15 +19,55 @@ import * as sharp from "sharp";
 import { win } from "./window";
 import { svgoPluginSettings, SKETCH_APP_ROOT } from "./config";
 
+//3D image stuff
+import * as THREE from 'three';
+
 const sendToRenderer = (err, id, _path) => {
+  if(typeof window === typeof undefined){
+    console.log("window not found");
+  }else
+  {
+    console.log("window.innerWidth");
+    console.log("window.innerHeight");
+    console.log(typeof window);
+    console.log(window.innerWidth);
+    console.log(window.innerHeight);
+  }
   if (!err) {
-    console.log(_path);
-    _path = "electron/scripts/TESTINGSS.png";
-    const objPath = path.parse(_path);
-    _path = path.format(objPath);
+    // console.log(_path);
+    // _path = "electron/scripts/TESTINGSS.png";
+    // const objPath = path.parse(_path);
+    // _path = path.format(objPath);
+    // var scene = new THREE.Scene();
+    // var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+    // var renderer = new THREE.WebGLRenderer();
+    // renderer.setSize( window.innerWidth, window.innerHeight );
+
+    // document.getElementById(id).append(renderer.domElement);
+
+    // var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+    // var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+    // var cube = new THREE.Mesh( geometry, material );
+    // scene.add( cube );
+
+    // camera.position.z = 5;
+
+    // var animate = function () {
+    //   requestAnimationFrame( animate );
+
+    //   cube.rotation.x += 0.01;
+    //   cube.rotation.y += 0.01;
+
+    //   renderer.render( scene, camera );
+    // };
+
+    // animate();
     win.webContents.send(id, _path);
-    console.log(id);
-    console.log(_path);
+    // console.log(id);
+    // console.log(_path);
+
+
   } else {
     log.error(err);
     win.webContents.send(id, "error");
