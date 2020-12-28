@@ -91,12 +91,32 @@
     class="tab-container"
     *ngSwitchCase="0"
   >
-    <div class="preview">
-      <img
+    <div id = "whatsDiplayed" class="preview">
+      <!-- <img
         *ngIf="file[currentState].path; else svgData"
         class="image"
         [src]="getPreviewURI(file[currentState].path)"
-      />
+      /> -->
+      <!-- <link href="../../../../../../../Madeleine.js/src/css/Madeleine.css" rel="stylesheet"> -->
+      <!-- <link rel="stylesheet" type="text/css" media="screen" href="../../../../../../../Madeleine.js/css/stylesheet.css"> -->
+      <script src="../../../../../../../Madeleine.js/src/lib/stats.js"></script>
+      <script src="../../../../../../../Madeleine.js/src/lib/detector.js"></script>
+      <script src="../../../../../../../Madeleine.js/src/lib/three.min.js"></script>
+      <script src="../../../../../../../Madeleine.js/src/Madeleine.js"></script>
+
+      <div id="target"></div>
+
+      <script>
+          console.log(1234); // not running?
+          window.onload = function(){
+            mad = new Madeleine({
+              target: 'target',
+              data: 'Octocat.stl',
+              path: '../../../../../../../Madeleine.js/src'
+            });
+          }; 
+      </script>
+
       <ng-template #svgData>
         <div
           class="image"
