@@ -1,17 +1,17 @@
 [data-theme="ultra-dark"] {
-  --accent-color: rgb(59, 214, 180);
-  --accent-color-2: #2dd597;
+  --accent-color: rgb(62, 196, 230);
+  --accent-color-2: #3ac1ca;
 
-  --window-bg: url("../img/window-background.png");
+  --window-bg: url("../img/xrayimages.jpg");
   --widnow-bg-size: 32px;
 
   --body-bg: #0f0940;
   --body-bg-25: rgba(0, 0, 0, 0.25);
 
   --body-fg: #fff;
-  --body-fg-70: rgba(255, 255, 255, 0.7);
-  --body-fg-90: rgba(255, 255, 255, 0.9);
-  --body-fg-95: rgba(255, 255, 255, 0.95);
+  --body-fg-70: rgba(250, 100, 9, 0.7);
+  --body-fg-90: rgba(250, 100, 9, 0.9);
+  --body-fg-95: rgba(250, 100, 9, 0.95);
 
   --body-shadow: inset -10px 1px 320px -10px rgba(22, 29, 47, 0.8);
 
@@ -93,8 +93,8 @@
     inset 0 -1px 0 0 #0f422f91;
 
   /* Import */
-  --import-bg-1: url("../img/import.svg");
-  --import-bg-2: url("../img/import-2.svg");
+  --import-bg-1: url("../img/doctor.svg");
+  --import-bg-2: url("../img/cartoon_bone.svg");
 
   /* Grid View */
   --grid-file-preview-bg: #fff;

@@ -31,9 +31,6 @@ app.on("ready", () => {
   appMenuInit();
   buildAppUI();
 
-  if (settings.getSync("app.updateCheck") === true) {
-    autoUpdater.checkForUpdates();
-  }
   // Handler for when text data is copied into the clipboard
   clipboardWatcher({
     onTextChange: (SVGxml: string) => {
@@ -45,10 +42,6 @@ app.on("ready", () => {
       }
     },
   });
-
-  if (settings.getSync("app.updateCheck")) {
-    autoUpdaterInit();
-  }
 });
 
 ipcMain.on("set-auto-updater", () => autoUpdaterInit());

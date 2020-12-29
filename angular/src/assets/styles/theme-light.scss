@@ -1,10 +1,10 @@
 [data-theme="light"] {
-  --accent-color: rgb(13, 210, 167);
-  --accent-color-2: #2dd597;
-  --accent-color-dark: #239a70;
+  --accent-color: rgb(210, 66, 13);
+  --accent-color-2: #c7260a;
+  --accent-color-dark: #cd270a;
 
   --window-bg: url("../img/window-background.png"),
-    linear-gradient(145deg, #f8f9fa 0, #99a2b394 100%);
+    linear-gradient(to bottom right, #06D6A0, #3bb5fc, #6d3dff);
   --widnow-bg-size: auto;
 
   --body-bg: #fff;
@@ -49,7 +49,7 @@
 
   /* Navigation */
   --nav-accent-shadow: rgba(0, 255, 201, 0.2);
-  --nav-active-icon: rgb(0, 171, 133);
+  --nav-active-icon: rgb(210, 66, 13);
   --nav-active-icon-shadow: 0 1px 0px rgba(255, 255, 255, 0.66),
     0 0 51px #3bd6b452;
 
@@ -93,8 +93,8 @@
     inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 
   /* Import */
-  --import-bg-1: url("../img/import_light.svg");
-  --import-bg-2: url("../img/import-2_light.svg");
+  --import-bg-1: url("../img/doctor.svg");
+  --import-bg-2: url("../img/cartoon_bone.svg");
 
   /* Grid View */
   --grid-file-preview-bg: #f5f5f5;

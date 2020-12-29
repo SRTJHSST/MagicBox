@@ -177,10 +177,10 @@
 
           <div class="text stagger" [innerHTML]="noFilesTitle"></div>
           <div class="formats stagger">
-            JPEG, PNG, GIF, TIFF, WEBP, SVG, SKETCH
+            X-ray images accpted in following formats: DCM, DCM30
           </div>
           <div class="shortcuts stagger">
-            or use shortcut <b>􀆔V</b> to paste SVG Markup
+            Note: the software currently only supports 3D pelvic image construction
           </div>
         </div>
       </div>
@@ -266,8 +266,7 @@
                 />
               </svg>
             </div>
-            <span>Tip:</span> Select a folder if you wish to store separately
-            optimized files.
+            <span>Tip:</span> Select a folder to store the stl file separately.
           </div>
           <button class="tip__action f alc c" (click)="setFolder()">
             <div class="folder-icon SF-Icon">􀈖</div>

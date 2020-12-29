@@ -49,7 +49,7 @@ export class NavigationComponent {
   }
 
   public openFeedbackPage(): void {
-    this.electronService.shell.openExternal(`mailto:a.katrukhin@gmail.com`);
+    this.electronService.shell.openExternal(`https://github.com/aryagrayeli/x-gan`);
   }
 
   public navigationStatus(): boolean {
