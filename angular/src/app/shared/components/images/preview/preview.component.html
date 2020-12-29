@@ -91,7 +91,7 @@
     class="tab-container"
     *ngSwitchCase="0"
   >
-    <div id = "whatsDiplayed" class="preview">
+    <div class="preview">
       <!-- <img
         *ngIf="file[currentState].path; else svgData"
         class="image"
@@ -99,15 +99,15 @@
       /> -->
       <!-- <link href="../../../../../../../Madeleine.js/src/css/Madeleine.css" rel="stylesheet"> -->
       <!-- <link rel="stylesheet" type="text/css" media="screen" href="../../../../../../../Madeleine.js/css/stylesheet.css"> -->
-      <script src="../../../../../../../Madeleine.js/src/lib/stats.js"></script>
+      <!-- <script src="../../../../../../../Madeleine.js/src/lib/stats.js"></script>
       <script src="../../../../../../../Madeleine.js/src/lib/detector.js"></script>
       <script src="../../../../../../../Madeleine.js/src/lib/three.min.js"></script>
-      <script src="../../../../../../../Madeleine.js/src/Madeleine.js"></script>
+      <script src="../../../../../../../Madeleine.js/src/Madeleine.js"></script> -->
 
-      <div id="target"></div>
+      <div id="target" class="image"></div>
 
-      <script>
-          console.log(1234); // not running?
+      <script> 
+          //THE SCRIPT TAG DOES NOT WORK IN ANGULAR
           window.onload = function(){
             mad = new Madeleine({
               target: 'target',

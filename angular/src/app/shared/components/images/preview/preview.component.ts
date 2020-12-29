@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Renderer2, Inject } from "@angular/core";
+import {DOCUMENT} from '@angular/common';
 import {
   PreviewFileService,
   ElectronService,
@@ -67,7 +68,9 @@ export class PreviewComponent implements OnInit {
     private electronService: ElectronService,
     private dropdownService: DropdownService,
     private optimizationService: OptimizationService,
-    private contextMenuService: ContextMenuService
+    private contextMenuService: ContextMenuService,
+    private renderer2: Renderer2,
+    @Inject(DOCUMENT) private _document
   ) { }
 
   ngOnInit() {
@@ -116,66 +119,107 @@ export class PreviewComponent implements OnInit {
             }
           }
           break;
-        case "sketch":
-          this.tabs = [TabItems.Attachments];
-          this.activeTabId = 2;
-          import("jszip").then((JSZip) => {
-            import("jszip-utils").then((JSZipUtils) => {
-              JSZipUtils.getBinaryContent(
-                this.file[this.currentState].path,
-                (err, data) => {
-                  JSZip.loadAsync(data)
-                    .then((sketch) => {
-                      // console.log(sketch.files);
-                      for (const attachment in sketch.files) {
-                        if (sketch.files.hasOwnProperty(attachment)) {
-                          switch (true) {
-                            case attachment.includes("images"):
-                              sketch.files[attachment].name = sketch.files[
-                                attachment
-                              ].name.replace("images/", "");
-                              this.sketchAttachments.images.push(
-                                sketch.files[attachment]
-                              );
-                              break;
-                            case attachment.includes("pages"):
-                              sketch.files[attachment].name = sketch.files[
-                                attachment
-                              ].name.replace("pages/", "");
-                              this.sketchAttachments.pages.push(
-                                sketch.files[attachment]
-                              );
-                              break;
-                            default:
-                              this.sketchAttachments.root.push(
-                                sketch.files[attachment]
-                              );
-                              break;
-                          }
-                        }
-                      }
-                    })
-                    .then(() => {
-                      // this.sketchAttachments.images.forEach(i => {
-                      //   console.log(i.name);
-                      // });
-                      // this.sketchAttachments.pages.forEach(i => {
-                      //   console.log(i.name);
-                      // });
-                    });
-                }
-              );
-            });
-          });
-          break;
         default:
           this.tabs = [TabItems.Preview];
           break;
       }
+
       this.dropdownService.setList(this.file);
     });
+    const s1 = this.renderer2.createElement('script');
+    //  s.type = 'text/javascript';
+    s1.src = "../../../../../../../Madeleine.js/src/lib/stats.js";
+    s1.text = ``;
+    this.renderer2.appendChild(this._document.body, s1);
+
+    const s2 = this.renderer2.createElement('script');
+    //  s.type = 'text/javascript';
+    s2.src = "../../../../../../../Madeleine.js/src/lib/detector.js";
+    s2.text = ``;
+    this.renderer2.appendChild(this._document.body, s2);
+
+    const s3 = this.renderer2.createElement('script');
+    //  s.type = 'text/javascript';
+    s3.src = "../../../../../../../Madeleine.js/src/lib/three.min.js";
+    s3.text = ``;
+    this.renderer2.appendChild(this._document.body, s3);
+
+    const s4 = this.renderer2.createElement('script');
+    //  s.type = 'text/javascript';
+    s4.src = "../../../../../../../Madeleine.js/src/Madeleine.js";
+    s4.text = ``;
+    this.renderer2.appendChild(this._document.body, s4);
+      
+    const s5 = this.renderer2.createElement('script');
+    s5.text = `
+      window.onload = function(){
+        mad = new Madeleine({
+          target: 'target',
+          data: 'Octocat.stl',
+          path: '../../../../../../../Madeleine.js/src'
+        });
+      };
+      `;
+      this.renderer2.appendChild(this._document.body, s5);
   }
 
+  public render3DSTLFile() {
+    //run this in the init
+    //path: string
+    // 1] do this with dom elements
+    // 2] do this by directly importing madeline
+
+    const s1 = this.renderer2.createElement('script');
+  //  s.type = 'text/javascript';
+  //  s1.src = "../../../../../../../Madeleine.js/src/lib/stats.js";
+   s1.src = "Madeleine.js/src/lib/stats.js";
+   s1.text = ``;
+   this.renderer2.appendChild(this._document.body, s1);
+
+   const s2 = this.renderer2.createElement('script');
+  //  s.type = 'text/javascript';
+  //  s2.src = "../../../../../../../Madeleine.js/src/lib/detector.js";
+   s2.src = "Madeleine.js/src/lib/detector.js";
+   s2.text = ``;
+   this.renderer2.appendChild(this._document.body, s2);
+
+   const s3 = this.renderer2.createElement('script');
+  //  s.type = 'text/javascript';
+  //  s3.src = "../../../../../../../Madeleine.js/src/lib/three.min.js";
+   s3.src = "Madeleine.js/src/lib/three.min.js";
+   s3.text = ``;
+   this.renderer2.appendChild(this._document.body, s3);
+
+   const s4 = this.renderer2.createElement('script');
+  //  s.type = 'text/javascript';
+  //  s4.src = "../../../../../../../Madeleine.js/src/Madeleine.js";
+   s4.src = "Madeleine.js/src/Madeleine.js";
+   s4.text = ``;
+   this.renderer2.appendChild(this._document.body, s4);
+    
+   const s5 = this.renderer2.createElement('script');
+  //  s5.text = `
+  //   window.onload = function(){
+  //     mad = new Madeleine({
+  //       target: 'target',
+  //       data: 'Octocat.stl',
+  //       path: '../../../../../../../Madeleine.js/src'
+  //     });
+  //   };
+  //   `;
+
+    s5.text = `
+    window.onload = function(){
+      mad = new Madeleine({
+        target: 'target',
+        data: 'Octocat.stl',
+        path: 'Madeleine.js/src'
+      });
+    };
+    `;
+    this.renderer2.appendChild(this._document.body, s5); 
+
+  }
   public getPreviewURI(path: string): string {
     return getPreviewURI(path);
   }
