@@ -1,148 +1,152 @@
-[data-theme="ultra-dark"] {
-  --accent-color: rgb(62, 196, 230);
-  --accent-color-2: #3ac1ca;
+[data-theme="light"] {
+  --accent-color: rgb(210, 66, 13);
+  --accent-color-2: #c7260a;
+  --accent-color-dark: #cd270a;
 
-  --window-bg: url("../img/xrayimages.jpg");
-  --widnow-bg-size: 32px;
+  --window-bg: url("../img/window-background.png"),
+    linear-gradient(to bottom right, #06D6A0, #3bb5fc, #6d3dff);
+  --widnow-bg-size: auto;
 
-  --body-bg: #0f0940;
-  --body-bg-25: rgba(0, 0, 0, 0.25);
+  --body-bg: #fff;
+  --body-bg-25: rgba(255, 255, 255, 0.25);
 
-  --body-fg: #fff;
-  --body-fg-70: rgba(250, 100, 9, 0.7);
-  --body-fg-90: rgba(250, 100, 9, 0.9);
-  --body-fg-95: rgba(250, 100, 9, 0.95);
+  --body-fg: rgb(54, 53, 58);
+  --body-fg-70: rgba(0, 0, 0, 0.7);
+  --body-fg-90: rgba(0, 0, 0, 0.9);
+  --body-fg-95: rgba(0, 0, 0, 0.95);
 
-  --body-shadow: inset -10px 1px 320px -10px rgba(22, 29, 47, 0.8);
+  --body-shadow: none;
 
-  --container-fg: #0f0940;
-  --container-fg-50: rgba(15, 9, 64, 0.5);
-  --container-fg-75: rgba(15, 9, 64, 0.75);
-  --container-bg: #fff;
-  --container-bg-30: rgba(255, 255, 255, 0.3);
-  --container-bg-60: rgba(255, 255, 255, 0.6);
-  --container-bg-75: rgba(255, 255, 255, 0.75);
+  --container-fg: #fff;
+  --container-fg-50: rgba(255, 255, 255, 0.5);
+  --container-fg-75: rgba(255, 255, 255, 0.75);
+  --container-bg: #5756614a;
+  --container-bg-30: rgba(15, 9, 64, 0.3);
+  --container-bg-60: rgba(15, 9, 64, 0.6);
+  --container-bg-75: rgba(15, 9, 64, 0.75);
 
-  --border: 1px dashed rgba(255, 255, 255, 0.34);
+  --border: 1px dashed rgba(15, 9, 64, 0.34);
 
-  --icon-container-fg: #fff;
-  --icon-container-bg: rgba(255, 255, 255, 0.3);
+  --icon-container-fg: #0f0940;
+  --icon-container-bg: rgba(#fff, 0.3);
 
-  --content-bg: rgba(46, 51, 58, 0.39);
+  --content-bg: rgba(255, 255, 255, 0.39);
 
-  --home-bg: rgba(62, 68, 76, 0.75);
-  --home-shadow: 0 5px 40px #00000033;
+  --home-bg: #fff;
+  --home-shadow: 0 5px 40px #4755632b;
 
-  --title-shadow: 0 1px 3px rgba(0, 0, 0, 0.29);
+  --title-shadow: none;
 
-  --settings-container-bg: rgba(0, 0, 0, 0.4);
-  --settings-container-fg: var(--body-fg);
-  --settings-dropdown: rgb(248, 248, 248);
-  --settings-input-fg: var(--container-fg-75);
-  --settings-input-bg: #fff;
+  --settings-container-bg: #f5f5f5;
+  --settings-container-fg: #36353acc;
+  --settings-dropdown: #fff;
+  --setting-input-fg: #0f0940;
+  --settings-input-bg: #f5f5f5;
 
-  --toggle-off-bg: #00000054;
+  --toggle-off-bg: #0000000d;
 
-  --hr-color: #56616b;
+  --hr-color: #56616b6e;
 
   /* Navigation */
-  --nav-accent-shadow: rgba(59, 214, 180, 0.17);
-  --nav-active-icon: var(--accent-color);
-  --nav-active-icon-shadow: 0 2px 10px rgba(0, 0, 0, 0.6),
-    0 0 51px var(--accent-color);
+  --nav-accent-shadow: rgba(0, 255, 201, 0.2);
+  --nav-active-icon: rgb(210, 66, 13);
+  --nav-active-icon-shadow: 0 1px 0px rgba(255, 255, 255, 0.66),
+    0 0 51px #3bd6b452;
 
-  --navigation-item-shadow: 0 1px 2px rgba(15, 9, 64, 0.68);
+  --navigation-item-shadow: 0 0 22px #ffffff61;
 
-  --navigation-icon-fg: rgba(255, 255, 255, 0.61);
-  --navigation-icon-fg-hover: rgba(255, 255, 255, 0.8);
-  --navigation-icon-shadow: 0 1px 0 rgba(0, 0, 0, 0.11);
-  --navigation-icon-color-shadow: rgba(59, 214, 180, 0.17);
+  --navigation-icon-fg: rgba(0, 0, 0, 0.41);
+  --navigation-icon-fg-hover: rgba(0, 0, 0, 0.41);
+  --navigation-icon-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+  --navigation-icon-color-shadow: rgba(59, 214, 180, 0.1);
 
-  --navigation-subitem-bg: rgba(0, 0, 0, 0.25);
-  --navigation-subitem-shadow: inset 0 0 30px rgba(0, 0, 0, 0.09),
-    0 1px 0 rgba(255, 255, 255, 0.02);
+  --navigation-subitem-bg: rgba(0, 0, 0, 0.04);
+  --navigation-subitem-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04),
+    0 1px 0 rgba(255, 255, 255, 0.19);
 
-  --navigation-new-files-label-fg: var(--container-fg);
-  --navigation-new-files-label-bg: linear-gradient(#fcdf0a 0%, #f9bf15 100%);
-  --navigation-new-files-label-shadow: 0 1px 1px rgba(0, 0, 0, 0.5),
-    0 0 15px rgba(252, 223, 10, 0.4);
+  --navigation-new-files-label-fg: rgba(72, 60, 11, 0.81);
+  --navigation-new-files-label-bg: linear-gradient(#f3d600 0, #f9bf15 100%);
+  --navigation-new-files-label-shadow: 0 1px 1px rgba(0, 0, 0, 0.13),
+    0 0 20px rgba(252, 223, 10, 0.73);
   --new-files-label-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 0 15px #fcdf0a;
 
-  --navigation-feedback-fg: var(--body-fg-90);
-  --navigation-feedback-bg: transparent;
-  --navigation-feedback-boder: 2px solid rgba(185, 191, 206, 0.34);
-  --navigation-feedback-shadow: 1px 2px 0 rgba(62, 68, 76, 0.3),
-    inset 0 1px 2px 0 rgba(62, 68, 76, 0.3);
+  --navigation-feedback-fg: var(--body-fg-70);
+  --navigation-feedback-bg: rgba(255, 255, 255, 0.5);
+  --navigation-feedback-boder: 2px solid transparent;
+  --navigation-feedback-shadow: none;
 
-  --navigation-context-menu-bg: rgba(39, 42, 47, 0.97);
-  --navigation-context-menu-shadow: none;
-  --navigation-context-menu-border: 1px solid rgba(255, 255, 255, 0.1);
+  --navigation-context-menu-bg: white;
+  --navigation-context-menu-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  --navigation-context-menu-border: 1px solid rgba(0, 0, 0, 0.1);
 
   /* Images */
-  --images-illustration-bg: red;
-  --images-view-mode-fg: var(--body-fg);
-  --images-view-mode-bg: var(--container-bg-30);
-  --images-view-mode-shadow: none;
-  --images-dropdown-fg: rgba(255, 255, 255, 0.75);
-  --images-dropdown-bg: var(--container-bg-30);
-  --images-shortcut-fg: rgba(255, 255, 255, 0.34);
-  --images-button-shadow: 0 2px 36px 0 rgba(45, 217, 179, 0.46),
+  --images-view-mode-fg: #b9bfce;
+  --images-view-mode-bg: #f5f5f5;
+  --images-view-mode-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  --images-dropdown-fg: #b9bfce;
+  --images-dropdown-bg: #f5f5f5;
+  --images-shortcut-fg: rgba(0, 0, 0, 0.34);
+  --images-button-shadow: 0 2px 36px 0 #07d08d40,
     inset 0 1px 0 0 rgba(255, 255, 255, 0);
-
   --button-shadow: 0 4px 43px 0 rgba(45, 217, 179, 0.76),
-    inset 0 -1px 0 0 #0f422f91;
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 
   /* Import */
   --import-bg-1: url("../img/doctor.svg");
   --import-bg-2: url("../img/cartoon_bone.svg");
 
   /* Grid View */
-  --grid-file-preview-bg: #fff;
-  --grid-file-preview-shadow: 0 2px 6px 0 rgba(15, 9, 64, 0.03);
-  --grid-file-preview-shadow-hover: 0 10px 23px -10px rgba(15, 9, 64, 0.23);
-  --grid-view-file-name: rgba(255, 255, 255, 0.97);
-  --grid-view-file-name-hover: rgba(255, 255, 255, 0.97);
-  --grid-view-file-stat: rgba(255, 255, 255, 0.6);
-  --grid-view-file-desc-shadow: none;
-  --grid-view-file-stat-font-style: 600;
+  --grid-file-preview-bg: #f5f5f5;
+  --grid-file-preview-shadow: inset 0 0px 3px 0 rgba(89, 106, 123, 0.03);
+  --grid-file-preview-shadow-hover: 0 15px 48px -10px rgba(160, 161, 162, 0.55),
+    0 0 1px 1px #0000000a;
+  --grid-view-file-name: #83858ae3;
+  --grid-view-file-name-hover: var(--body-fg-70);
+  --grid-view-file-stat: rgba(54, 53, 58, 0.6);
+  --grid-view-file-desc-shadow: 0 1px 0 #ffffff52;
+  --grid-view-file-stat-font-style: 400;
 
-  --grid-view-file-hover-bg: rgba(0, 0, 0, 0.28);
-  --grid-view-file-hover-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  --grid-view-file-hover-bg: rgba(255, 255, 255, 0.55);
+  --grid-view-file-hover-shadow: 0 1px 0 0 rgba(#6a789e, 0.08);
 
-  --grid-view-file-selected-bg: rgba(0, 0, 0, 0.28);
-  --grid-view-file-selected-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  --grid-view-file-selected-bg: #949cb030;
+  --grid-view-file-selected-shadow: inset 0 0 24px rgba(0, 0, 0, 0.05);
 
-  --grid-view-file-format-fg: var(--container-fg-50);
-  --grid-view-file-format-bg: #efefef;
+  --grid-view-file-format-fg: #fff;
+  --grid-view-file-format-bg: #464654d4;
 
   /* Table */
-  --table-even-row-bg: rgba(0, 0, 0, 0.09);
-  --table-file-format-fg: rgba(255, 255, 255, 0.5);
-  --table-file-format-bg: #0000004a;
-  --table-file-format-font-weight: 800;
+  --table-even-row-bg: rgba(0, 0, 0, 0.02);
+  --table-file-format-fg: rgba(0, 0, 0, 0.38);
+  --table-file-format-bg: #46465412;
+  --table-file-format-font-weight: 400;
 
   /* Preview */
-  --preview-fg: #f3f3f3;
-  --preview-text-shadow: 0 2px 6px rgba(30, 29, 45, 0.8);
-  --preview-title-shadow: 0 2px 6px rgba(30, 29, 45, 0.8);
-  --preview-title-shadow2: 0 3px 9px rgba(0, 0, 0, 0.29);
-  --preview-title-format: var(--body-fg);
-  --preview-img-bg: var(--container-bg);
-  --preview-shadow: 0 38px 27px -27px rgba(30, 29, 45, 0.8);
-  --preview-tabs-shadow: 0 1px 2px rgba(30, 29, 45, 0.68);
-  --preview-tabs-fg-active: rgba(255, 255, 255, 0.8);
-  --preview-buttons-bg: var(--icon-container-bg);
-  --preview-buttons-fg: var(--icon-container-fg);
-  --preview-header-stat: var(--preview-fg);
-  --preview-code-bg: var(--preview-tabs-fg);
+  --preview-fg: rgba(30, 29, 45, 0.51);
+  --preview-text-shadow: none;
+  --preview-title-shadow: none;
+  --preview-title-shadow2: none;
+  --preview-title-format: #49565f9e;
+  --preview-img-bg: #fff;
+  --preview-shadow: 0 38px 27px -27px rgba(195, 198, 204, 0.8),
+    0 19px 13px -32px rgba(195, 198, 204, 0.8),
+    0 8px 6px -38px rgba(173, 198, 204, 0.8);
+  --preview-tabs-shadow: none;
+  --preview-tabs-fg-active: rgba(0, 0, 0, 0.8);
+  --preview-tabs-fg: #2d2f31a1;
+  --preview-buttons-fg: var(--images-dropdown-fg);
+  --preview-buttons-bg: #fff;
+  --preview-header-stat: #2a2c33cc;
+  --preview-code-bg: #fff;
   --preview-stat-icon-fg: #99a0a59e;
 
   /* Empty Set */
-  --empty-state-message-fg: #fff;
-  --empty-state-add-files-fg: rgba(255, 255, 255, 0.9);
-  --empty-state-add-files-bg: rgba(0, 0, 0, 0.22);
+  --empty-state-message-fg: rgba(68, 66, 82, 0.75);
+  --empty-state-add-files-fg: rgba(68, 66, 82, 0.75);
+  --empty-state-add-files-bg: var(--images-dropdown-bg);
   --empty-state-tip-border: 1px solid rgba(0, 0, 0, 0.1);
-  --empty-state-tip-icon: #ffcc00;
-  --empty-state-tip-message-fg: rgba(255, 255, 255, 0.75);
-  --empty-state-tip-button-bg: rgba(0, 0, 0, 0.13);
+  --empty-state-tip-icon: #ecbd00;
+  --empty-state-tip-message-fg: rgba(68, 66, 82, 0.75);
+  --empty-state-tip-button-bg: var(--images-dropdown-bg);
 }

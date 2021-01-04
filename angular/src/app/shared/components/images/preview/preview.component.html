@@ -97,6 +97,7 @@
         class="image"
         [src]="getPreviewURI(file[currentState].path)"
       /> -->
+      
       <!-- <link href="../../../../../../../Madeleine.js/src/css/Madeleine.css" rel="stylesheet"> -->
       <!-- <link rel="stylesheet" type="text/css" media="screen" href="../../../../../../../Madeleine.js/css/stylesheet.css"> -->
       <!-- <script src="../../../../../../../Madeleine.js/src/lib/stats.js"></script>
@@ -247,7 +248,7 @@
 
 <div @FooterAnimation class="footer f sb alc" *ngIf="!isFileOptimized()">
   <div *ngIf="!file.loading">
-    <div class="main-btn" (click)="optimizeFile()">Optimize</div>
+    <div class="main-btn" (click)="optimizeFile()">Project to 3D</div>
   </div>
   <div *ngIf="file.loading" class="main-btn red" (click)="stopProcess()">
     Stop
