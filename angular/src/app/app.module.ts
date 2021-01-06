@@ -66,6 +66,7 @@ import {
 import { DropdownService } from "./shared/components/dropdown/dropdown.service";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppConfig } from "../environments/environment";
+import { StlModelViewerModule} from 'angular-stl-model-viewer';
 
 @NgModule({
   declarations: [
@@ -108,6 +109,7 @@ import { AppConfig } from "../environments/environment";
     CodemirrorModule,
     VirtualScrollerModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: AppConfig.production }),
+    StlModelViewerModule,
   ],
   providers: [
     ElectronService,
